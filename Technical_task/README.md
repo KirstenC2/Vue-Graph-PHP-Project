@@ -3,8 +3,10 @@
 ## Project setup
 ```
 npm install
-```
+npm install  vue-router@3 
 
+```
+vue-router@3 (for vue 2)
 ### Compiles and hot-reloads for development
 ```
 npm run serve
