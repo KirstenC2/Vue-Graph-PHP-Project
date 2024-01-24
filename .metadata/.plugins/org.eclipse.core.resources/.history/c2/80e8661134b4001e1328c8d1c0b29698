@@ -1,0 +1,23 @@
+<?php
+
+// Change the working directory to the "dataset" folder
+chdir(__DIR__ . '/../dataset');
+
+try {
+    // Connect to SQLite database using PDO
+    $database = new PDO('sqlite:Modul_12A_Purchases_past30_days.db');
+    
+    // Sample API to get all data from the table
+    $result = $database->query('SELECT * FROM your_table_name');
+    $data = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Output JSON response
+    header('Content-Type: application/json');
+    echo json_encode($data);
+} catch (PDOException $e) {
+    // Handle connection errors
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+// Change the working directory back to the "controllers" folder
+chdir(__DIR__);

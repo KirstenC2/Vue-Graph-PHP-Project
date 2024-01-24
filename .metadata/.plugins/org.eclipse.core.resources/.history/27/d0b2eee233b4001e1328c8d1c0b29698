@@ -1,0 +1,10 @@
+<?php
+
+// Specify the path to the "dataset" folder
+$datasetPath = __DIR__ . '/dataset';
+
+// Change the working directory to the "dataset" folder
+chdir($datasetPath);
+
+
+?>

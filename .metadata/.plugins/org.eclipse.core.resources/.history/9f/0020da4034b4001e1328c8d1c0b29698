@@ -1,0 +1,28 @@
+<?php
+
+// Specify the path to the "dataset" folder
+$datasetPath = __DIR__ . '/dataset';
+
+// Change the working directory to the "dataset" folder
+chdir($datasetPath);
+
+// Now, the working directory is set to the "dataset" folder
+
+try {
+    // Connect to SQLite database using PDO
+    $database = new PDO('sqlite:Modul_12A_Purchases_past30_days.db');
+    
+    // Sample API to get all data from the table
+    $result = $database->query('SELECT * FROM your_table_name');
+    $data = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Output JSON response
+    header('Content-Type: application/json');
+    echo json_encode($data);
+} catch (PDOException $e) {
+    // Handle connection errors
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+// You might want to change the working directory back to the script's directory
+chdir(__DIR__);

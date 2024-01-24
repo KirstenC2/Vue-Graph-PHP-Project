@@ -1,0 +1,8 @@
+<?php
+
+$dbPath = "../dataset/Modul_12A_Purchases_past30_days.db"; // Adjust the path accordingly
+
+$db = new SQLite3($dbPath);
+
+
+?>

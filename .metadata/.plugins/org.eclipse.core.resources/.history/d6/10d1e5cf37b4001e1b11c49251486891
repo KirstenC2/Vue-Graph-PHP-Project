@@ -1,0 +1,16 @@
+<?php
+
+require_once 'controller/ApiController.php';
+
+$dbPath = "./dataset/Modul_12A_Purchases_past30_days.db"; // Adjust the path accordingly
+
+$apiController = new ApiController($dbPath);
+
+header('Content-Type: application/json');
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    echo $apiController->getAllData("your_table"); // Replace "your_table" with your actual table name
+} else {
+    echo json_encode(['error' => 'Invalid request method']);
+}
+?>

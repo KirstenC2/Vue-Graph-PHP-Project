@@ -1,0 +1,15 @@
+<?php
+
+$databasePath = 'C:\Users\User\Desktop\personal learning\HK interview\Modul_12A_Purchases_past30_days.db';
+
+try {
+    $database = new PDO("sqlite:$databasePath");
+    
+    $result = $database->query('SELECT * FROM table_name');
+    $data = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    header('Content-Type: application/json');
+    echo json_encode($data);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}

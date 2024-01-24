@@ -1,0 +1,34 @@
+<?php
+
+$dbPath = "../dataset/Modul_12A_Purchases_past30_days.db"; // Adjust the path accordingly
+
+// Create a new SQLite3 connection
+$db = new SQLite3($dbPath);
+
+if (!$db) {
+    die("Error connecting to SQLite3 database.");
+}
+
+// Perform a SELECT query to fetch all rows from a table
+$query = "SELECT * FROM table_name"; // Replace "your_table" with your actual table name
+$result = $db->query($query);
+
+if ($result) {
+    // Loop through the result set and process each row
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        // Access individual columns using the column names
+        $column1Value = $row['column1'];
+        $column2Value = $row['column2'];
+        // Add more columns as needed
+        
+        // Process or display the data as needed
+        echo "Column1: $column1Value, Column2: $column2Value\n";
+    }
+} else {
+    echo "Error executing query: " . $db->lastErrorMsg();
+}
+
+// Close the SQLite3 connection
+$db->close();
+
+?>

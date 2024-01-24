@@ -1,0 +1,14 @@
+<?php
+
+class View
+{
+    public function displayData($data)
+    {
+        foreach ($data as $row) {
+            // Display or process data as needed
+            echo "PSU: {$row['psu']}, HH: {$row['hh']}, M12_Q00: {$row['m12_q00']}, M12_Q01: {$row['m12_q01']}, M12_Q02: {$row['m12_q02']}, M12_Q03: {$row['m12_q03']}\n";
+        }
+    }
+}
+?>
+?>

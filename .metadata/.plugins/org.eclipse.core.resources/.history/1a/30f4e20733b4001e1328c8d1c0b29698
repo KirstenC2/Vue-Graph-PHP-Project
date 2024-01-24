@@ -1,0 +1,19 @@
+<?php
+
+    // Connect to SQLite database
+    $database = new SQLite3('dataset/Modul_12A_Purchases_past30_days.db');
+
+    // Sample API to get all data from the table
+    /*$result = $database->query('SELECT * FROM your_table_name');
+    $data = [];
+    
+    while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        $data[] = $row;
+    }
+    
+    // Output JSON response
+    header('Content-Type: application/json');
+    echo json_encode($data);
+*/
+
+?>

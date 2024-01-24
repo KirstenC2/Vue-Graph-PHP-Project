@@ -1,0 +1,20 @@
+<?php
+
+// Specify the path to your SQLite database file
+$databasePath = '\dataset\Modul_12A_Purchases_past30_days.db';
+
+try {
+    // Connect to SQLite database using PDO
+    $database = new PDO("sqlite:$databasePath");
+    
+    // Sample API to get all data from the table
+    $result = $database->query('SELECT * FROM table_name');
+    $data = $result->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Output JSON response
+    header('Content-Type: application/json');
+    echo json_encode($data);
+} catch (PDOException $e) {
+    // Handle connection errors
+    echo 'Connection failed: ' . $e->getMessage();
+}

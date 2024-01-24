@@ -1,0 +1,6 @@
+<?php
+
+// Specify the path to your SQLite database file
+    $databasePath = __DIR__ . '/dataset/Modul_12A_Purchases_past30_days.db';
+    echo $databasePath;
+?>

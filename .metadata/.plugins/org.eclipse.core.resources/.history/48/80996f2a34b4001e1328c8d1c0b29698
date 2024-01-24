@@ -1,0 +1,6 @@
+<?php
+
+// Change the working directory to the "dataset" folder
+$path = chdir(__DIR__ . '/../dataset');
+echo $path;
+?>

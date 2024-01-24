@@ -1,0 +1,18 @@
+<?php
+
+
+class ApiController extends CI_Controller {
+    public function getData() {
+        $this->load->database();
+        
+        // Replace 'your_table_name' with your actual table name
+        $query = $this->db->query("SELECT * FROM your_table_name");
+        $data = $query->result_array();
+        
+        $this->output
+        ->set_content_type('application/json')
+        ->set_output(json_encode($data));
+    }
+}
+
+?>

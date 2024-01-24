@@ -1,0 +1,12 @@
+<?php
+
+// Connect to SQLite database using PDO
+$database = new PDO('sqlite:your_database.db');
+
+// Sample API to get all data from the table
+$result = $database->query('SELECT * FROM your_table_name');
+$data = $result->fetchAll(PDO::FETCH_ASSOC);
+
+// Output JSON response
+header('Content-Type: application/json');
+echo json_encode($data);
