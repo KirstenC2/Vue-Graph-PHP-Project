@@ -3,10 +3,10 @@
 ## Project setup
 ```
 npm install
-npm install  vue-router@3 
+npm install -g @vue/cli
+npm install vue-router@3 
 npm install vue-echarts
 npm install echarts
-
 ```
 vue-router@3 (for vue 2)
 or 
