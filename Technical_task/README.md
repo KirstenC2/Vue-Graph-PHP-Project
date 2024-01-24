@@ -4,9 +4,16 @@
 ```
 npm install
 npm install  vue-router@3 
+npm install vue-echarts
+npm install echarts
 
 ```
 vue-router@3 (for vue 2)
+or 
+```
+npm install vue-router
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -53,5 +60,18 @@ Database: (task/backend/database.db)
 
   
 ** this table shown the sample data from the database.
+
+Table:
+
+![image](https://github.com/KirstenC2/Technical_task/assets/89898288/1d16a907-ef94-4b13-977d-f04183d2e8e1)
+
+
+
+
+Graph:
+
+
+![image](https://github.com/KirstenC2/Technical_task/assets/89898288/ffa62fd4-31b8-4047-8b3f-ad01d571f775)
+
 
 
