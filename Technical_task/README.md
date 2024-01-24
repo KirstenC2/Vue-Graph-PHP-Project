@@ -75,3 +75,12 @@ Graph:
 
 
 
+Filtered Graph:
+
+
+![image](https://github.com/KirstenC2/Technical_task/assets/89898288/8db6f5da-646e-4301-a4ff-15109f2c9585)
+
+
+
+
+
